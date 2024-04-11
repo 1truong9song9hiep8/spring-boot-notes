@@ -1,6 +1,6 @@
 # Redis và Spring Boot
 Redis là tên viết tắt của Remote Dictionary Server (Máy chủ từ điển từ xa)
-Redis là 1 hệ thống lưu trữ key-value in-memory rất mạnh mẽ và phổ biến hiện nay. Tốc độ truy xuất dữ liệu cực kì nhanh chóng nên rất được dùng trong các ứng dụng hiện nay.
+Redis là 1 hệ thống lưu trữ key-value in-memory rất mạnh mẽ và phổ biến hiện nay. Vì dữ liệu được lưu trữ trong bộ nhớ thay vì ổ đĩa nên tốc độ truy xuất dữ liệu cực kì nhanh chóng nên rất được dùng trong các ứng dụng hiện nay. Tuy nhiên nếu có sự cố sảy ra như mất điện thì dữ liệu sẽ bị mất, để khác phục điều đó thì redis có chop phép backup trong một file...
 
 
 ## 2. Cài đặt Redis
