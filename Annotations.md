@@ -18,3 +18,13 @@ Một điều đặc biệt là các bean trong Spring Boot được quản lý 
 
 
 @Qualifier được dùng trong arugment, dùng để chỉ định chính xác tên mà instance được gán.
+
+### @PostConstruct và @PreDestroy
+`@PostConstruct` là một Annotation đánh dấu trên một method bên trong một Bean. IoC Container hoặc ApplicationContext sẽ gọi method này sau khi Bean đó được tạo ra và quản lý.
+
+`@PreDestroy` là một Annotation đánh dấu trên một method bên trong một Bean. IoC Container hoặc ApplicationContext sẽ gọi method này trước khi Bean đó bị xóa hoặc không được quản lý nữa.
+
+@PostConstruct và @PreDestroy rất hữu ích trong việc quản lý vòng đời của Bean. Bạn có thể sử dụng chúng để thực hiện các nhiệm vụ như cài đặt giá trị mặc định trong thuộc tính sau khi Bean được khởi tạo hoặc xóa dữ liệu trước khi Bean bị xóa.
+
+### @Service và @Controller và @Repository
+
