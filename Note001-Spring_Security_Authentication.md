@@ -16,8 +16,15 @@ SecurityContextHolder, SecurityContext và Athentication là 3 lớp có liên q
 
 Authentication là một interface nó chứa các thông tin của chủ thể đã được xác thực.
 
+Spring Security cung cấp một số cơ chế xác thực:
+- Basic Authentication: xác thực dựa vào username/password, dễ triển khai nhưng không an toàn lắm.
+- Form-based Authentication: thông tin người dùng được gói lại trong form.
+-  
 
 Để trả về một Authentication từ các Athentication Filter, phải thông qua một method tên là `authenticate()` của một iterface khác là `AuthenticationManager`, sau đó đối tượng Authentication này sẽ được gán lại cho một đói tượng SecurityContext, 
 
 ProviderManager thường được dùng để triển khai AuthenticationManager
 
+interface AuthenticationProvider có một hàm tên là authenticate, nó trả về một Authentication
+
+Mỗi AuthenticationProvider trong Spring Security có một phương thức là authenticate(), và trong phương thức này, bạn triển khai logic xác thực của mình. Cụ thể, bạn sẽ kiểm tra thông tin đăng nhập được cung cấp bởi người dùng (ví dụ: tên người dùng và mật khẩu) và xác minh tính hợp lệ của chúng. Nếu thông tin này là hợp lệ, AuthenticationProvider sẽ trả về một đối tượng Authentication hợp lệ, nếu không, nó sẽ trả về một ngoại lệ hoặc giá trị null để chỉ ra rằng quá trình xác thực không thành công.
