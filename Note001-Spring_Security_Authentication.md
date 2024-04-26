@@ -27,4 +27,10 @@ ProviderManager thường được dùng để triển khai AuthenticationManage
 
 interface AuthenticationProvider có một hàm tên là authenticate, nó trả về một Authentication
 
-Mỗi AuthenticationProvider trong Spring Security có một phương thức là authenticate(), và trong phương thức này, bạn triển khai logic xác thực của mình. Cụ thể, bạn sẽ kiểm tra thông tin đăng nhập được cung cấp bởi người dùng (ví dụ: tên người dùng và mật khẩu) và xác minh tính hợp lệ của chúng. Nếu thông tin này là hợp lệ, AuthenticationProvider sẽ trả về một đối tượng Authentication hợp lệ, nếu không, nó sẽ trả về một ngoại lệ hoặc giá trị null để chỉ ra rằng quá trình xác thực không thành công.
+Mỗi AuthenticationProvider trong Spring Security có một phương thức là authenticate(), và trong phương thức này, bạn triển khai logic xác thực của mình. Cụ thể, bạn sẽ kiểm tra thông tin đăng nhập được cung cấp bởi người dùng (ví dụ: tên người dùng và mật khẩu) và xác minh tính hợp lệ của chúng. Nếu thông tin này là hợp lệ, AuthenticationProvider sẽ trả về một đối tượng Authentication hợp lệ, nếu không, nó sẽ trả về một ngoại lệ hoặc giá trị null để chỉ ra rằng quá trình xác thực không thành công. 
+đối tượng Authentication được trả về thường sẽ được tạo từ các lớp triển khai có sẵn trong spring security, hoặc bằng một lớp mà bạn tự triển khai. Một số lớp triển khai mà Spring Security cung cấp:
+
+
+
+
+
